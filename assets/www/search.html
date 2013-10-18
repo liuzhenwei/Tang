@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>唐诗三百首</title>
+<link rel="stylesheet" href="jquery.mobile.structure-1.1.1.css" />
+<link rel="stylesheet" href="css/a.css" />
+<script src="cordova-2.0.0.js"></script>
+<script src="jquery-1.7.2.js"></script>
+<script src="js/common.js"></script>
+<script src="jquery.mobile-1.1.1.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" data-theme="a" id="search">
+	<div data-role="header" data-theme="a">
+		<a title="首页" href="home.html" data-ajax="false" data-icon="home" data-role="button" data-theme="a" data-iconpos="notext">首页</a>
+		<h1>诗歌查询</h1>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+		<label for="search-key">输入诗歌内容（至少2个字符）:</label>
+		<input type="search" name="searchKey" id="searchKey" value="" data-theme="a" />
+		<fieldset data-role="controlgroup" data-type="horizontal" class="search-type">
+			<input type="radio" name="search-type" id="search-type-name" value="name" checked="checked"/> 
+			<label for="search-type-name">按诗歌名</label> 
+			<input type="radio" name="search-type" id="search-type-content" value="content"  /> 
+			<label for="search-type-content">按诗歌内容</label> 
+		</fieldset> 
+		<a href="#result" data-role="button" data-theme="a" id="searchSubmit">查 询</a>
+	</div>
+</div>
+
+<div data-role="page" data-theme="a" id="tempSearchResult">
+	<div data-role="header" data-theme="a">
+		<a title="首页" href="home.html" data-ajax="false" data-icon="home" data-role="button" data-theme="a" data-iconpos="notext">首页</a>
+		<h1>查询结果</h1>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+		<ul data-role="listview" data-theme="a" data-inset="true" data-inset="true" page="search"></ul>
+		<a href="#search" data-role="button" data-theme="a">返 回</a>
+	</div>
+</div>
+
+</body>
+</html>

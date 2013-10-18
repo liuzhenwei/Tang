@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>唐诗三百首</title>
+<link rel="stylesheet" href="jquery.mobile.structure-1.1.1.css" />
+<link rel="stylesheet" href="css/a.css" />
+<script src="cordova-2.0.0.js" charset="utf-8"></script>
+<script src="jquery-1.7.2.js"></script>
+<script src="js/common.js"></script>
+<script src="jquery.mobile-1.1.1.js"></script>
+</head>
+
+<body pageName="home">
+	
+<div data-role="page" data-theme="a" id="home">
+	<div data-role="header" data-theme="a">
+		<h1>唐诗三百首</h1>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+		<ul data-role="listview" data-theme="a" data-divider-theme="a">
+			<li><a href="list.html" data-ajax="false">全部诗歌</a></li>
+			<li><a href="author.html" data-ajax="false">按诗人姓名浏览</a></li>
+			<li><a href="type.html" data-ajax="false">按诗歌类型浏览</a></li>
+			<li><a href="search.html" data-ajax="false">诗歌查询</a></li>
+		</ul>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<p>&copy; 2012 liuzhenwei.sh.cn 版权所有</p>
+	</div>
+</div>
+
+</body>
+</html>

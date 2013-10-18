@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>唐诗三百首</title>
+<link rel="stylesheet" href="jquery.mobile.structure-1.1.1.css" />
+<link rel="stylesheet" href="css/a.css" />
+<script src="cordova-2.0.0.js"></script>
+<script src="jquery-1.7.2.js"></script>
+<script src="js/common.js"></script>
+<script src="jquery.mobile-1.1.1.js"></script>
+</head>
+
+<body>
+<div data-role="page" data-theme="a" id="home">
+	<div data-role="header" data-theme="a">
+		<h1 aria-level="1" role="heading">唐诗三百首</h1>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+		<ul data-role="listview" data-theme="a" data-divider-theme="a">
+			<li><a href="#list" loading="true">全部诗歌</a></li>
+			<li><a href="#author" loading="true">按诗人姓名浏览</a></li>
+			<li><a href="#type" loading="true">按诗歌类型浏览</a></li>
+			<li><a href="#searchCont">按诗歌内容查询</a></li>
+		</ul>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<p>&copy; 2012 liuzhenwei.sh.cn 版权所有</p>
+	</div>
+</div>
+
+<div data-role="page" data-theme="a" id="searchCont">
+	<div data-role="header" data-theme="a">
+		<a title="首页" href="#home" data-icon="home" data-role="button" data-theme="a" data-iconpos="notext">首页</a>
+		<h1 aria-level="1" role="heading">按诗歌内容查询</h1>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+		<label for="search-key">输入诗歌内容（至少2个字符）:</label>
+		<input type="search" name="searchKey" id="searchKey" value="" data-theme="a" />
+		<a href="#searchResult" data-role="button" data-theme="a" id="searchSubmit">查 询</a>
+	</div>
+</div>
+<div data-role="page" data-theme="a" id="tempSearchResult">
+	<div data-role="header" data-theme="a">
+		<a title="首页" href="#home" data-icon="home" data-role="button" data-theme="a" data-iconpos="notext">首页</a>
+		<h1 aria-level="1" role="heading">查询结果</h1>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+		<ul data-role="listview" data-theme="a" data-inset="true" data-inset="true"></ul>
+		<a href="#searchCont" data-role="button" data-theme="a">返 回</a>
+	</div>
+</div>
+
+<div data-role="page" data-theme="a" id="author">
+	<div data-role="header" data-theme="a">
+		<a title="首页" href="#home" data-icon="home" data-role="button" data-theme="a" data-iconpos="notext">首页</a>
+		<h1 aria-level="1" role="heading">按作者浏览</h1>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+		<ul data-role="listview" data-theme="a">
+		</ul>
+	</div>
+</div>
+<div data-role="page" data-theme="a" id="type">
+	<div data-role="header" data-theme="a">
+		<a title="首页" href="#home" data-icon="home" data-role="button" data-theme="a" data-iconpos="notext">首页</a>
+		<h1 aria-level="1" role="heading">按诗歌类型浏览</h1>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+		<ul data-role="listview" data-theme="a">
+		</ul>
+	</div>
+</div>
+<div data-role="page" data-theme="a" id="list">
+	<div data-role="header" data-theme="a">
+		<a title="首页" href="#home" data-icon="home" data-role="button" data-theme="a" data-iconpos="notext">首页</a>
+		<h1 aria-level="1" role="heading">诗歌列表</h1>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+		<ul data-role="listview" data-theme="a" data-inset="true" data-filter="true" data-inset="true" data-filter-theme="a" data-filter-placeholder="查询诗歌名...">
+		</ul>
+	</div>
+</div>
+<div data-role="page" data-theme="a" id="detail">
+	<div data-role="header" data-theme="a">
+		<a title="首页" href="#home" data-icon="home" data-role="button" data-theme="a" data-iconpos="notext">首页</a>
+		<h1 aria-level="1" role="heading"></h1>
+		<a title="返回" href="#" data-icon="grid" data-role="button" data-rel="back" data-theme="a" data-iconpos="notext">返回</a>
+	</div>
+	
+	<div class="lyric-detail" data-role="content" data-theme="a">
+	</div>
+
+	<div data-role="footer">
+		<p>&copy; 2012 liuzhenwei.sh.cn 版权所有</p>
+	</div>
+</div>
+
+</body>
+</html>
